@@ -1,5 +1,34 @@
 # Task 09 — Activations
 
+
+##  شرح
+
+### إيه هي الـ Activation Function؟
+الـ Activation هي اللي بتقرر الـ neuron يشتغل ولا يفصل. من غيرها الموديل هيبقى خط مستقيم بسيط!
+
+### الـ Activations اللي جربناها:
+
+**1. tanh**
+- بيطلع قيم من -1 لـ 1
+- قديم ومعروف
+- ممكن يعمل vanishing gradient (الموديل يتوه)
+
+**2. softsign**
+- شبه tanh بس أنعم
+- بيطلع قيم من -1 لـ 1
+-  gradient أحسن شوية
+
+**3. GELU**
+- الجديد والفخم 
+- بيستخدم في GPT و BERT
+-  smooth ومرن
+- أداء ممتاز
+
+
+---
+
+
+
 ## 1. Objective
 Compare different activation functions (tanh, softsign, GELU) to understand how activation choice affects model performance and training dynamics.
 
@@ -29,36 +58,3 @@ Different **activations** introduce distinct non-linearities that affect gradien
 ## 5. Key Takeaway
 Activation functions shape the model's non-linearity and gradient flow; GELU and other modern activations can sometimes outperform traditional choices like ReLU or tanh.
 
----
-
-## 🗣️ شرح بالعامية
-
-### إيه هي الـ Activation Function؟
-الـ Activation هي اللي بتقرر الـ neuron "يشتغل" ولا "يفصل". من غيرها الموديل هيبقى خط مستقيم بسيط!
-
-### الـ Activations اللي جربناها:
-
-**1. tanh**
-- بيطلع قيم من -1 لـ 1
-- قديم ومعروف
-- ❌ ممكن يعمل vanishing gradient (الموديل يتوه)
-
-**2. softsign**
-- شبه tanh بس أنعم
-- بيطلع قيم من -1 لـ 1
-- ✅ gradient أحسن شوية
-
-**3. GELU**
-- الجديد والفخم 🌟
-- بيستخدم في GPT و BERT
-- ✅ smooth ومرن
-- ✅ أداء ممتاز
-
-### إيه الفرق؟
-تخيل إنك بتسأل الـ neuron "تشتغل؟":
-- **ReLU**: "أيوه" أو "لأ" (0 أو الرقم)
-- **tanh**: "أيوه شوية" أو "لأ شوية" (-1 لـ 1)
-- **GELU**: "أيوه بنسبة كذا%" (أذكى وأنعم)
-
-### الخلاصة
-الـ Activation Function زي شخصية الـ neuron - في الحاد (ReLU)، والمرن (GELU). اختار اللي يناسب مشكلتك! 🎭
