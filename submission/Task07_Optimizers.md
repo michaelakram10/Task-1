@@ -1,5 +1,38 @@
 # Task 07 — Optimizers
 
+
+##  شرح
+
+### إيه هو الـ Optimizer؟
+الـ Optimizer هو اللي بيقرر إزاي الموديل يتعلم - يعني إزاي يعدّل الـ weights بتاعته.
+
+### الـ Optimizers اللي جربناها:
+
+**1. SGD (Stochastic Gradient Descent)**
+- بيمشي بخطوات ثابتة
+- بطيء بس بسيط
+- ممكن يتوه في المنحدرات
+
+**2. Momentum**
+- بتاخد سرعة مع الوقت
+- أسرع من SGD
+
+**3. Adam**
+- أذكى optimizer - بيظبط السرعة لكل weight لوحده
+- سريع ومستقر
+- الأشهر والأكتر استخداماً
+
+**4. AdamW**
+- زي Adam بس بيعمل weight decay أحسن
+- بيحسن الـ generalization
+
+### النتيجة؟
+Adam و AdamW كانوا الأسرع والأحسن! 
+
+---
+
+
+
 ## 1. Objective
 Compare the performance of different optimization algorithms (SGD, Momentum, Adam, AdamW) to understand how optimizer choice affects training dynamics and convergence.
 
@@ -31,36 +64,3 @@ Different optimizers have distinct **optimizer behavior** characteristics.
 ## 5. Key Takeaway
 Adam and AdamW optimizers typically converge faster and achieve better performance than SGD, with adaptive learning rates that adjust per parameter during training.
 
----
-
-## 🗣️ شرح بالعامية
-
-### إيه هو الـ Optimizer؟
-الـ Optimizer هو اللي بيقرر إزاي الموديل يتعلم - يعني إزاي يعدّل الـ weights بتاعته.
-
-### الـ Optimizers اللي جربناها:
-
-**1. SGD (Stochastic Gradient Descent)**
-- زي واحد بيمشي بخطوات ثابتة
-- بطيء بس بسيط
-- ممكن يتوه في المنحدرات
-
-**2. Momentum**
-- زي كورة بتتدحرج - بتاخد سرعة مع الوقت
-- أسرع من SGD
-- بيعدي المطبات الصغيرة
-
-**3. Adam**
-- أذكى optimizer - بيظبط السرعة لكل weight لوحده
-- سريع ومستقر
-- الأشهر والأكتر استخداماً
-
-**4. AdamW**
-- زي Adam بس بيعمل weight decay أحسن
-- بيحسن الـ generalization
-
-### النتيجة؟
-Adam و AdamW كانوا الأسرع والأحسن! 🏆
-
-### الخلاصة
-الـ Optimizer زي السواق - في سواق بطيء وحذر (SGD)، وفي سواق سريع وشاطر (Adam). اختار اللي يناسب مشروعك! 🚗
